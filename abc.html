@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+    <style>
+        /* Add basic styling */
+        .main { padding: 20px; }
+        .units { margin: 10px 0; cursor: pointer; padding: 10px; }
+        .circle-con input[type="radio"] { margin-right: 10px; }
+        .cart { display: none; margin-top: 10px; }
+        .highlighted { border: 2px solid #FF6B82; }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="line-text">
+            <hr>
+            <span>YAY! It’s BOGO</span>
+            <hr>
+        </div>
+        <div class="content-container">
+            <ul class="uni-container">
+                <li class="units" id="unit1" onclick="showElement(this)">
+                    <ul class="unit-container">
+                        <li class="circle-con">
+                            <input id="radio1" type="radio" name="unit" />
+                            <h4>1 Unit<span>10% off</span></h4>
+                        </li>
+                        <li>
+                            <p>$10.00 USD <del>$24.00 USD</del></p>
+                        </li>
+                    </ul>
+                    <div class="cart" id="cart-pd">
+                        <div>
+                            <label for="size1">Size</label>
+                            <div class="size-container">
+                                <select name="size" id="size1">
+                                    <option value="s">S</option>
+                                    <option value="m">M</option>
+                                    <option value="l">L</option>
+                                </select>
+                                <select name="size" id="size2">
+                                    <option value="s">S</option>
+                                    <option value="m">M</option>
+                                    <option value="l">L</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="color1">Color</label>
+                            <div class="color-container">
+                                <select name="color" id="color1">
+                                    <option value="red">Red</option>
+                                    <option value="black">Black</option>
+                                    <option value="green">Green</option>
+                                </select>
+                                <select name="color" id="color2">
+                                    <option value="red">Red</option>
+                                    <option value="black">Black</option>
+                                    <option value="green">Green</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="units" onclick="showElement(this)">2 Units</li>
+                <li class="units" onclick="showElement(this)">3 Units</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function showElement(unit) {
+            // Hide other cart sections and remove styles from other units
+            document.querySelectorAll('.cart').forEach(cart => cart.style.display = 'none');
+            document.querySelectorAll('.units').forEach(el => el.classList.remove('highlighted'));
+
+            // Show the selected cart and highlight the clicked unit
+            const cart = unit.querySelector('.cart');
+            const radio = unit.querySelector('input[type="radio"]');
+
+            if (cart) cart.style.display = 'flex';
+            unit.classList.add('highlighted');
+            if (radio) radio.checked = true;  // Check the corresponding radio button
+        }
+    </script>
+</body>
+</html>

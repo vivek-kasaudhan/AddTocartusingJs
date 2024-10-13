@@ -1,0 +1,153 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.main{
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
+
+    
+}
+.line-text {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 50px;
+}
+
+.line-text hr {
+    flex-grow: 1;
+    border: none;
+    border-top: 2px solid #C8C8C8;
+    margin: 0 10px;
+   
+
+}
+
+.line-text span {
+    white-space: nowrap; 
+    color: #FF6B82;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24.2px;
+
+}
+ul{
+    list-style: none;
+}
+.uni-container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+}
+.units{
+    border: 1px solid #C8C8C8;
+    position: relative;
+    margin: 20px;
+}
+
+.highlighted { border: 2px solid #FF6B82; }
+
+.units .unit-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 20px;
+}
+
+input[type='radio'] {
+    accent-color: #FF6B82;
+    border: 1px solid #FF6B82 ;
+}
+/* .unit-container .circle-con{
+    position: relative;
+} */
+
+ /* .unit-container .circle-con .circle{
+position: absolute;
+width: 12.04px;
+height: 12.04px;
+border-radius: 50%;
+top: 26px;
+left: 29px;
+gap: 0px;
+opacity: 0px;
+border: 1px solid gray;
+
+} */
+ .circle-con{
+    display: flex;
+    gap: 15px;
+ }
+.circle-con h4{
+    font-size:  18px;
+    font-weight: 600;
+}
+.circle-con h4 .dis{
+    font-size: 12px;
+    background-color: #FF6B82;
+    color: #fff;
+    padding: 4px;
+    margin:  0px 20px;
+    font-weight: 300;
+}
+
+.sp{
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    background-color: #fff;
+    color: #111;
+}
+
+.cart{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 15px;
+}
+#cart-pd{
+    display: none;
+}
+.size-container,.color-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.cart label{
+    margin: 10px;
+    font-size: 15px;
+    font-weight: 300;
+    padding: 7px;
+}
+.cart select{
+    padding: 6px;
+}
+.checkout{
+    display: flex;
+    justify-content: space-between;
+    margin:5px 20px;
+    font-weight: 500;
+    font-size: 16px;
+}
+p:first-child{
+    color: #FF6B82 ;
+    font-weight: 500;
+    font-size: 16px;
+}
+.btn{
+    background-color: #FF6B82;
+    color: #fff;
+    font-size: 14px;
+    padding: 8px 10px;
+    border: none;
+    outline: none;
+    width: 750px;
+    font-weight: 300;
+
+    
+}
